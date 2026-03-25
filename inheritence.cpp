@@ -21,6 +21,7 @@ public:
     string department;
 
    void getStudentInfo(){
+    //so name and age accessable in this class.
         cout << "name:" <<  name << endl;
         cout << "age:" <<  age << endl;
         cout << "name:" << rollno  << endl;
