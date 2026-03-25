@@ -1,4 +1,5 @@
 #include <iostream>
+#include <climits>
 using namespace std;
 
 
@@ -85,7 +86,30 @@ int digitSum (int n){
  return sum;  
 }
 
+// fint the smalles and larges value in the array
+int MaxMin( int nums[], int size) {
+    int smalest = INT_MAX;
+    int largest = INT_MIN;
+
+    for(int i=1; i< size; i++){
+      if(nums[i] < smalest){
+         smalest = nums[i];
+      };
+       if(nums[i] > largest){
+         largest = nums[i];
+      };
+    };
+
+    cout << "largest :" << largest << endl;
+    cout << "smallest :" << smalest << endl;
+
+};
+
+
 int main(){
-    cout << digitSum(122232) << endl;
+    int nums[]= {2, 45, 534, 694, 23, 8, 2, 20};
+    int size = sizeof(nums)/ sizeof(int);
+    MaxMin(nums, size);
+    // cout << digitSum(122232) << endl;
     return 0;
 }
