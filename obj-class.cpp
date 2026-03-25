@@ -67,3 +67,4 @@ int main(){
 // Encapsulation: 
 // wrapping up of data and member functions in a single unit is called Encapsulations.
 // examples code show the concept of encapsulations.
+// its used for hiding confidential data.like account no in banks or passwards of the users.
