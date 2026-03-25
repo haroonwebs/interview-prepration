@@ -8,20 +8,28 @@ using namespace std;
 class Teacher {
     //properties 
 private:    
-    string name;
-    string subject;
     string department;
     double salary; 
 
 public:    
+    string name;
+    string subject;
  // setter methods 
     void changeDepartment( string newDepartment){
         department = newDepartment;
     }
 
+     void SetSalary( double s){
+        salary = s;
+    }
+
      // getter method 
     string getDepartment(){
         return department;
+    }
+
+     double getSalary(){
+        return salary;
     }
 
 };
@@ -35,11 +43,24 @@ int main(){
 // when we create the object of the class, it allocate the specific memory for that object.
    Teacher tech1;
    tech1.changeDepartment("pakistan");
+   tech1.SetSalary(30000);
+
 // we can create multipal objects of a single class like below 
 //    Teacher tech2;
 //    Teacher tech3;
-cout << tech1.getDepartment() << endl; 
+
+// how i can assign valuse to the properties of the Teacher class with out getter and setter fucntions
+// i only work for that properties which are declare publically.
+// in this case teacher salary and department declared private to we need to use setter method to set values and getter for get valuse
+    tech1.name= "Haroon";
+    tech1.subject= "Computer Science";
+    cout << tech1.getDepartment() << endl; 
+    cout << tech1.name << endl; 
+    cout << tech1.subject << endl; 
+    cout << tech1.getSalary();
    
     return 0;
 }
 
+
+// lessons covered . objects, classes, setters functions, getters functions, access modifiers.
