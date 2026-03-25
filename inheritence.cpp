@@ -6,7 +6,7 @@ using namespace std;
 
 // parient class having the name and age property.
 class Person {
-public:
+protected:
     string name;
     double age;
 
@@ -32,15 +32,19 @@ public:
     //so name and age accessable in this class.
         cout << "name:" <<  name << endl;
         cout << "age:" <<  age << endl;
-        cout << "name:" << rollno  << endl;
+        cout << "roll No:" << rollno  << endl;
         cout << "department:" <<  department << endl;
+    }
+
+    void setAge (double a, string  n) {
+        age = a;
+        name= n;
     }
 };
 
 int main(){
     Student stu1;
-    stu1.age=26;
-    stu1.name= "Muhammad Haroon Talib";
+    stu1.setAge(2, "Muhammad Haroon Talib");
     stu1.rollno= 2;
     stu1.department= "Computer Science";
     stu1.getStudentInfo();
@@ -57,3 +61,6 @@ int main(){
 //age:26,
 // name:2, 
 //department:Computer Science
+
+
+// when the propertes of the parient is in protected mode then you do not access the valus in the main function to set that values you need to carete a setter functions.
