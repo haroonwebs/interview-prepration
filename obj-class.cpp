@@ -64,3 +64,6 @@ int main(){
 
 
 // lessons covered . objects, classes, setters functions, getters functions, access modifiers.
+// Encapsulation: 
+// wrapping up of data and member functions in a single unit is called Encapsulations.
+// examples code show the concept of encapsulations.
