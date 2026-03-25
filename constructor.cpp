@@ -12,13 +12,28 @@ private:
 
 public:    
 // my own created constructor. am using it to assign inital valuse to properties.
-    Student (){
+// There are three types of constructors. 1: Non-parameterize, 2: parameterize, 3: copy constructor.
+
+
+// this is example of non parametrized constructor because not any parameter is passed to constructor.
+    // Student (){
+    //     cout << "hey i am constructor" << endl;
+    //     department= "Computer Science";
+    //     rollNo = 1;
+    //     name="Haroon Talib";
+    //     subject= "Information Technology";
+    // }
+
+
+// parametrized constructor.
+      Student (string d, int r, string n, string o){
         cout << "hey i am constructor" << endl;
-        department= "Computer Science";
-        rollNo = 1;
-        name="Haroon Talib";
+        department= d;
+        rollNo = r;
+        name= n;
         subject= "Information Technology";
     }
+
     string name;
     string subject;
 
@@ -36,8 +51,9 @@ public:
 
 
 int main(){
-    Student stu1; // when i write this line constructor is automatically called behind the seen.
-    stu1.name= "Mubeen Talib";
+    // when use parametrized constructor we can pass values from here. not for non-parameterized constructor.
+    Student stu1("Physics", 2, "Tahseen Talib", "math"); 
+    // stu1.name= "Mubeen Talib";
     // above i am overriding the name value so its output is Mubeen Talib Not Haroon Talib, it override the inital value.
     cout << stu1.name << endl;
     cout << stu1.getRollNo() << endl;
