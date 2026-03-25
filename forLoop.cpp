@@ -48,26 +48,44 @@ using namespace std;
 // };
 
 
-// find the prime 
-int main() {
-    int n = 4;
+// // find the prime 
+// int main() {
+//     int n = 4;
     
-    bool isPrime = true;
+//     bool isPrime = true;
 
-for(int i=2; i * i<=n; i++){
-    if(n%i==0){
-        isPrime = false;
-    } 
- };
+// for(int i=2; i * i<=n; i++){
+//     if(n%i==0){
+//         isPrime = false;
+//     } 
+//  };
 
- if(isPrime == true) {
-    cout << "This is a prime Number" << endl;
- } else {
-    cout << "This is not a prime Number" << endl;
- };
+//  if(isPrime == true) {
+//     cout << "This is a prime Number" << endl;
+//  } else {
+//     cout << "This is not a prime Number" << endl;
+//  };
  
  
-    cout << endl;
+//     cout << endl;
 
- return 0;
-};
+//  return 0;
+// };
+
+
+// fint the sum of the digits of the number
+int digitSum (int n){
+    int sum = 0;
+    while (n>0)
+    {
+        int lastdigit = n%10;
+        n /= 10;
+        sum += lastdigit;
+    }
+ return sum;  
+}
+
+int main(){
+    cout << digitSum(122232) << endl;
+    return 0;
+}
