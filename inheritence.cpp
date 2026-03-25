@@ -9,6 +9,10 @@ class Person {
 public:
     string name;
     double age;
+
+    Person (){
+        cout << "hey i am constructor of Person class" << endl;
+    }
 };
 
 
@@ -19,6 +23,10 @@ class Student : public Person {
 public:
     int rollno;
     string department;
+
+    Student (){
+        cout << "hey i am constructor of Student class" << endl;
+    }
 
    void getStudentInfo(){
     //so name and age accessable in this class.
@@ -40,3 +48,12 @@ int main(){
     return 0;
 }
 
+
+// Important note: when we create the object of the derived class, first the constructor of the parient call invoked then the constructor of the derived class invoked
+// output of the above code is:
+// hey i am constructor of Person class,
+// hey i am constructor of Student class, 
+//name:Muhammad Haroon Talib,
+//age:26,
+// name:2, 
+//department:Computer Science
