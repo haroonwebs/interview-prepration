@@ -107,7 +107,7 @@ int MaxMin( int nums[], int size) {
 
 
 int main(){
-    int nums[]= {2, 45, 534, 694, 23, 8, 2, 20};
+    int nums[]= {2, 45, 534, 694, 23, 8, 2, -20};
     int size = sizeof(nums)/ sizeof(int);
     MaxMin(nums, size);
     // cout << digitSum(122232) << endl;
