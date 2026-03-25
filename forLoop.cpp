@@ -34,14 +34,39 @@ using namespace std;
 // };
 
 
-// find the factorial numbers of the number
+// // find the factorial numbers of the number
+// int main() {
+//     int n = 30;
+//     int factorial = 1;
+// for(int i=1; i<=n; i++){
+//         factorial = factorial * i ;
+//  };
+//     cout << factorial << endl;
+//     cout << endl;
+
+//  return 0;
+// };
+
+
+// find the prime 
 int main() {
-    int n = 30;
-    int factorial = 1;
-for(int i=1; i<=n; i++){
-        factorial = factorial * i ;
+    int n = 4;
+    
+    bool isPrime = true;
+
+for(int i=2; i * i<=n; i++){
+    if(n%i==0){
+        isPrime = false;
+    } 
  };
-    cout << factorial << endl;
+
+ if(isPrime == true) {
+    cout << "This is a prime Number" << endl;
+ } else {
+    cout << "This is not a prime Number" << endl;
+ };
+ 
+ 
     cout << endl;
 
  return 0;
