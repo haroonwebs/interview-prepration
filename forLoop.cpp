@@ -105,11 +105,27 @@ int MaxMin( int nums[], int size) {
 
 };
 
+int reverseArray( int nums[], int size) {
+    int start= 0;
+    int end = size-1;
+
+    while (start < end) {
+        swap(nums[start], nums[end]);
+        start ++;
+        end --;
+    } 
+
+    for(int i=0 ; i<size; i++){
+    cout << nums[i] << " ";
+    }
+};
+
 
 int main(){
     int nums[]= {2, 45, 534, 694, 23, 8, 2, -20};
     int size = sizeof(nums)/ sizeof(int);
-    MaxMin(nums, size);
+    // MaxMin(nums, size);
+    reverseArray(nums, size);
     // cout << digitSum(122232) << endl;
     return 0;
 }
