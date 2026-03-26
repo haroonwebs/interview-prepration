@@ -29,9 +29,20 @@ public:
         Node* newNode = new Node(value); // new keyword help us to create dynamic object
         if(head == NULL){
            head = newNode;
+           tail = newNode;
         } else {
          newNode->next = head;
          head = newNode;
+        }
+    };
+
+    void push_back(int value){
+        Node* newNode = new Node(value);
+        if(head==NULL){
+            head = tail = newNode;
+        }else{
+            tail->next= newNode;
+            tail = newNode;
         }
     };
 
@@ -55,5 +66,6 @@ int main () {
     ll.push_front(1);
     ll.push_front(2);
     ll.push_front(3);
+    ll.push_back(4);
     ll.printLint();
 };
