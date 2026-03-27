@@ -64,6 +64,17 @@ class dublyList {
       }
    }
 
+// function to pop_back means deleting a node from the end of the list.
+   void pop_back(){
+      Node* temp = tail;
+      tail = tail->prev;
+      if(tail != NULL){
+         tail->next=NULL;
+         temp->prev=NULL;
+      delete temp;
+      }
+   }
+
    void printList () {// this function is same as single list for tervers the list.
       Node* temp = head;// here we are creating the temporary poiner make it the head of the list. we can not run the head itself because list are non reverable itselt.
       while(temp != NULL){// while loop run as long as the temp gose to null.means temp reached list last node.
@@ -86,9 +97,11 @@ int main() {
    dl.push_front(12);
    dl.push_front(5);
    dl.push_front(7);
-   dl.push_back(55);
+   // dl.push_back(55);
    dl.push_front(7);
-   dl.pop_front();
-   dl.pop_front();
+   // dl.pop_front();
+   // dl.pop_front();
+   dl.pop_back();
+   dl.pop_back();
    dl.printList();
 };
