@@ -25,8 +25,8 @@ int BinerySearch(vector<int> arr , int target){
 
 
 int main (){
-    vector<int> arr = {1 , 3, 5, 6,7,9, 19, 20, 44, 64,654,7534};
-    int target1 = 7534;
+    vector<int> arr = {1 , 3, 5, 6,7,9, 19, 20, 44, 64,654,};
+    int target1 = 64;
 
     cout << BinerySearch(arr, target1) << endl;
 
