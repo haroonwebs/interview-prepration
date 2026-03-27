@@ -40,6 +40,7 @@ class dublyList {
            };
    };
 
+  
    // function to add a node at the last of the link.
    void push_back(int value){
           Node* newNode = new Node(value);
@@ -51,6 +52,17 @@ class dublyList {
             tail = newNode; 
           }
    };
+
+    //function to pop_front means deleting a node from start of the list.
+   void pop_front(){
+      Node* temp = head; // created a temporary pointer because deleting node is created in the dynamic memory location so to delete that we need to create pointer. also creating that temp is the head of the node.
+      head= head->next; // head to the next node becouse if we deleted the node without creating another head then we lost our control over list in the memory.
+      if(head != NULL){// if head is already null means list is not exist. 
+            head->prev= NULL; // newly created head points to the previous node and distroying the connection. 
+            temp->next=NULL;//we also have previouse head data which is in temp pointer. temp->next == NULL means distroying the connection between the previous and newly head.
+            delete temp;// when connections are distroyed then this line clear the node from the memory.
+      }
+   }
 
    void printList () {// this function is same as single list for tervers the list.
       Node* temp = head;// here we are creating the temporary poiner make it the head of the list. we can not run the head itself because list are non reverable itselt.
@@ -75,6 +87,8 @@ int main() {
    dl.push_front(5);
    dl.push_front(7);
    dl.push_back(55);
-
+   dl.push_front(7);
+   dl.pop_front();
+   dl.pop_front();
    dl.printList();
 };
