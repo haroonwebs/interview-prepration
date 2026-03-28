@@ -15,10 +15,33 @@ string ReverseString(string name){
     return name;
 }
 
+string tolowerCase(string name){
+  for (int i = 0; i < name.length() -1 ; i++){
+     name[i]= tolower(name[i]);
+  }
+  return name;
+}
+
+
+bool Palindrom (string name){
+    string lowerName = tolowerCase(name);
+    int start = 0;
+    int end = lowerName.length() - 1;
+    while (start <= end){
+        if(lowerName[start] != lowerName[end] ){
+         return false;
+        }else {
+          return true;
+        };
+    };
+    
+}
+
 
 
 
 int main () {
-   string name = "haroon";
+   string name = "madam";
+   cout << Palindrom(name) << endl;
    cout <<ReverseString(name) << endl;
 };
