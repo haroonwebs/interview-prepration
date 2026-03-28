@@ -20,6 +20,21 @@ int BinerySearch(vector<int> arr , int target){
        return -1;
 };
 
+int RecursiveBinerySerch(vector<int> arr, int target, int start , int end){
+    // int start = 0, end= arr.size() - 1;
+    while(start<=end){
+        int mid = start + (end - start)/ 2;
+        if(target > arr[mid]){
+          return RecursiveBinerySerch(arr, target, mid + 1, end);
+        }else if (target< arr[mid]){
+          return RecursiveBinerySerch(arr, target, start, mid-1);
+        }else{
+            return mid;
+        }; 
+    }
+    return -1;
+};
+
 
 
 
@@ -29,5 +44,5 @@ int main (){
     int target1 = 64;
 
     cout << BinerySearch(arr, target1) << endl;
-
+    cout << RecursiveBinerySerch(arr, target1, 0, arr.size() - 1) << endl;
 }
