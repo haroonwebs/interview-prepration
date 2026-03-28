@@ -38,10 +38,21 @@ bool Palindrom (string name){
 }
 
 
+bool FindCharactorInString(string name, char alphabat){
+    for (int i = 0; i <= name.length() - 1; i++) {
+        if (name[i] == alphabat){
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
 
 
 int main () {
-   string name = "madam";
+   string name = "hadam";
+   char ch= 'n';
    cout << Palindrom(name) << endl;
    cout <<ReverseString(name) << endl;
+   cout <<FindCharactorInString(name, ch) << endl;
 };
