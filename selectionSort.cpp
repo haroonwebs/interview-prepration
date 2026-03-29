@@ -43,7 +43,6 @@ void printSortedArry(int arry[], int n){
 int main () {
   int arry[] = {1, 2, 3, 3, 8, 5 ,6 ,7};
   int n = sizeof(arry)/ sizeof(arry[0]);
-//   BubbleSortForDecending(arry, n);
 //   SelectionSortForAssending(arry, n);
   SelectionSortForDecending(arry, n);
   printSortedArry(arry, n);
