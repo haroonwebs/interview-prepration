@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-
+// time complexity for the bubble sort is o(n^2)
 void BubbleSortForAssending(int arry[], int n){
   for (int i = 0; i < n-1; i++){
     for (int j = 0; j < n-i-1; j++){
